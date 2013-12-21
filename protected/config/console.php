@@ -51,7 +51,7 @@ return array(
 	'commandMap' => array(
             'migrate' => array(
 			 // alias of the path where you extracted the zip file
-            'class' => 'vendor.yiiext.migrate-command.EMigrateCommand',
+            'class' => 'application.vendor.yiiext.migrate-command.EMigrateCommand',
             // this is the path where you want your core application migrations to be created
             'migrationPath' => 'application.migrations',
             // the name of the table created in your database to save versioning information
