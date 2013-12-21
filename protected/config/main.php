@@ -62,7 +62,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-			'tablePrefix' => 'app_',
+			'tablePrefix' => 'tbl_',
 		),
 		
 		'errorHandler'=>array(
