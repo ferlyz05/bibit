@@ -11,7 +11,7 @@ return array(
 
 	'modules'=>array(
 		'user'=>array(
-			'class' => 'application.vendor.mishamx.yii-user.UserModule',
+			'class' => 'application.vendor.mishamx.yii-user.modules.user.UserModule',
 		),
 	),
 	// application components
