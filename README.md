@@ -18,3 +18,7 @@ Download required Package
 php composer.phar require mishamx/yii-user
 
 You can now use the module here http://yii-webapp/index.php?r=user
+
+
+REPO:
+http://packages.phundament.com/
