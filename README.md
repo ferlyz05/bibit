@@ -3,8 +3,8 @@ bibit
 
 Yii project kick starter
 
-Install Composer
-================
+Install Composer (optional)
+---------------------------
 curl -s http://getcomposer.org/installer | php
 
 Install Package
