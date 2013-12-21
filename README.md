@@ -22,3 +22,7 @@ You can now use the module here http://yii-webapp/index.php?r=user
 
 REPO:
 http://packages.phundament.com/
+
+Nasty things might need manually to do:
+- Create "runtime" folder under "protected" directory
+- Create "migrations" folder under "protected\vendor\mishamx\yii-user" directory
