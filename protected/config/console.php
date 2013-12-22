@@ -8,6 +8,10 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+	
+	'import'=>array(
+		'application.components.config.*',
+	),
 
 	'modules'=>array(
 		'user'=>array(
@@ -27,7 +31,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-			'tablePrefix' => 'tbl_',
+			'tablePrefix' => 'app_',
 		),
 		
 		'log'=>array(
@@ -44,12 +48,12 @@ return array(
         'composer.callbacks' => array(
             // args for Yii command runner
             'yiisoft/yii-install' => array('yiic', 'webapp', dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'),
-            //'post-update' => array('yiic', 'migrate'),
-            //'post-install' => array('yiic', 'migrate'),
+            'post-update' => array('yiic', 'migrate'),
+            'post-install' => array('yiic', 'migrate'),
         ),
     ),        
 	'commandMap' => array(
-            'migrate' => array(
+		'migrate' => array(
 			 // alias of the path where you extracted the zip file
             'class' => 'application.vendor.yiiext.migrate-command.EMigrateCommand',
             // this is the path where you want your core application migrations to be created
@@ -59,11 +63,11 @@ return array(
             // the application migrations are in a pseudo-module called "core" by default
             'applicationModuleName' => 'core',
             // define all available modules (if you do not set this, modules will be set from yii app config)
-            'modulePaths' => array(
-            	'user' => 'application.vendor.mishamx.yii-user.migrations',
-            ),
+			'modulePaths' => array(
+				'user' => 'application.vendor.mishamx.yii-user.migrations',
+			),
             // you can customize the modules migrations subdirectory which is used when you are using yii module config
-            'migrationSubPath' => 'migrations',
+            //'migrationSubPath' => 'migrations',
             // here you can configure which modules should be active, you can disable a module by adding its name to this array
             'disabledModules' => array(
 				#'admin', 'anOtherModule', // ...
