@@ -28,6 +28,12 @@ class ConfigHelper
 			}
         }
 		
+		if(empty($new_data))
+		{
+			echo "No configuration provided, process terminated.";
+			return false;
+		}
+		
 		//	Convert two dimensional array to one dimensional array in php5
 		$new_data = call_user_func_array('array_merge', $new_data);
 		 

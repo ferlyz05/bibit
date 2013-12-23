@@ -10,7 +10,6 @@
             'applicationModuleName' => 'core',
             // define all available modules (if you do not set this, modules will be set from yii app config)
 			'modulePaths' => array(
-				'user' => 'application.vendor.mishamx.yii-user',
 			),
             // you can customize the modules migrations subdirectory which is used when you are using yii module config
             //'migrationSubPath' => 'migrations',
