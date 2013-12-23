@@ -9,9 +9,10 @@
     'connectionString' => 'mysql:host=localhost;dbname=contest',
     'emulatePrepare' => true,
     'username' => 'root',
-    'password' => '',
+    'password' => 'rahasia',
     'charset' => 'utf8',
     'tablePrefix' => 'tbl_',
+    'initSQLs' => 'SETNAMES\'utf8\'COLLATE\'utf8_general_ci\';',
   ),
   'errorHandler' => 
   array (
@@ -33,5 +34,5 @@
   array (
     'password' => '123',
   ),
-  'title' => 'MyYiiBlog',
+  'title' => false,
 );
