@@ -6,5 +6,6 @@
             'pre-update' => array('yiic', 'chkdir', 'migrationPath'),
             'post-update' => array('yiic', 'migrate'),
             'post-install' => array('yiic', 'migrate'),
+            'post-install' => array('yiic', 'DbImport', 'Auto'),
         ),
     );

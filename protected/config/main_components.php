@@ -24,11 +24,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=contest',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
+			'connectionString' => 'sqlite:protected/vendor/yiisoft/yii/demos/blog/protected/data/blog.db',
 			'tablePrefix' => 'tbl_',
 		),
 		
