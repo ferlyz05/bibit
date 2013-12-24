@@ -9,4 +9,8 @@ class ConsoleCommand extends CConsoleCommand
 		echo $text."\n";return;
 	}
 	
+	public function checkDir($dirName)
+	{
+		return is_dir($dirName);
+	}
 }

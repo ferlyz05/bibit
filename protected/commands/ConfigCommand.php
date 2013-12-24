@@ -71,11 +71,7 @@ EOD;
 					if($this->checkFile($this->env))
 						if($this->checkFile($this->fileName))
 						{
-							$scope = array("import", "modules", "components", "params", "tes");
-							if (in_array($args[1], $scope))
-								$this->processConfig();
-							else
-								$this->usageError("You can only configure: ".implode(',',$scope)."}.");
+							$this->processConfig();
 						}
 						else
 							$this->text("File {$this->fileName}.php not found");

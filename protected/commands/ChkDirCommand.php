@@ -70,10 +70,6 @@ EOD;
 				$this->text("Directory alredy exist.");
 	}
 	
-	protected function checkDir($dirName)
-	{
-		return is_dir($dirName);
-	}
 	
 	protected function createDir($dirName)
 	{

@@ -22,9 +22,8 @@ return array(
 		),
 		 */
 		// uncomment the following to use a MySQL database
-		
 		'db'=>array(
-			'connectionString' => 'sqlite:protected/vendor/yiisoft/yii/demos/blog/protected/data/blog.db',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 			'tablePrefix' => 'tbl_',
 		),
 		

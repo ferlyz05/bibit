@@ -17,7 +17,7 @@
  * @package system.cli.commands
  * @since 1.0
  */
-class ChkDirCommand extends ConsoleCommand
+class DbImportCommand extends ConsoleCommand
 {
 	private $env;
 	private $fileName;
@@ -47,7 +47,7 @@ EOD;
 			foreach(Yii::app()->commandMap['migrate']['modulePaths'] as $module=>$path)
 			{
 				$modulePath = Yii::getPathOfAlias($path);
-				if(!$this->checkDir($modulePath))
+				if($this->checkDir($modulePath))
 				{
 					if($this->scan($modulePath))
 						$this->text("Succeed to import the sql data of '{$module}' module.");
@@ -64,10 +64,11 @@ EOD;
 		$moduleDir = scandir($dir, 1);
 		if(array_search('data', $moduleDir))
 		{
-			$dataDir = scandir($dir, 1);
+			$dataDir = scandir($dir. DIRECTORY_SEPARATOR .'data', 1);
 			if(array_search('schema.sqlite.sql', $dataDir))
 			{
-				if(DLDatabaseHelper::import($dir. DIRECTORY_SEPARATOR .'data'. DIRECTORY_SEPARATOR .'schema.sqlite.sql'))
+				$dbFile = $dir. DIRECTORY_SEPARATOR .'data'. DIRECTORY_SEPARATOR .'schema.sqlite.sql';
+				if(DLDatabaseHelper::import($dbFile))
 					return true;
 				else
 					$this->text("Import failed.");
